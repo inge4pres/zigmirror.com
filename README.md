@@ -31,7 +31,7 @@ Steps:
 2. Register the Cloudflare nameservers in the domain's registrar settings
 3. Configure an R2 bucket <MYBYUCKET>
 4. Clone this repository
-5. Install []`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+5. Install [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
 
        npm i -D wrangler@latest
        wrangler login
