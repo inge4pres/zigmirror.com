@@ -14,7 +14,7 @@ flowchart LR
     B(zigmirror.com/file)
     B --> C{R2 storage}
     C -->|bad filename| E[HTTP 404]
-    C -->|file exists| D[HTTP 302]
+    C -->|file exists| D[HTTP 302] -->Z[R2 storage URL]
     C -->|file missing| F[fetch ziglang.org]
 ```
 
