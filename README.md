@@ -1,7 +1,8 @@
 # zigmirror.com
----
 
 A community mirror to download the [Zig](https://ziglang.org) programming language binaries.
+
+---
 
 ### Architecture
 
