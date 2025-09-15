@@ -7,15 +7,18 @@ A community mirror to download the [Zig](https://ziglang.org) programming langua
 ### Architecture
 
 This mirror is based on Cloudflare.
-It uses Workers and R2 to host download links for all the avilable Zig binary artifacts.
+It uses Workers, R2, and static assets to host both a website and download links for all the available Zig binary artifacts.
 
 ```mermaid
 flowchart LR
-    B(zigmirror.com/file)
-    B --> C{R2 storage}
-    C -->|bad filename| E[HTTP 404]
-    C -->|file exists| D[HTTP 302] -->Z[R2 storage URL]
-    C -->|file missing| F[fetch ziglang.org]
+    A(zigmirror.com) --> B{Request type}
+    B -->|zig-* filename| C[Zig Mirror Logic]
+    B -->|other URLs| D[Static Website]
+    C --> E{R2 storage}
+    E -->|bad filename| F[HTTP 404]
+    E -->|file exists| G[HTTP 302] -->H[R2 storage URL]
+    E -->|file missing| I[fetch ziglang.org]
+    D --> J[Static HTML/CSS from Assets]
 ```
 
 ### Replicate this setup
@@ -44,11 +47,15 @@ Steps:
 
 8. Modify `wrangler.jsonc` with the name of the bucket (<MYBUCKET>) and the R2 URL (`BUCKET_PUBLIC_URL`)
 
-9. Deploy the worker
+9. Add your static website assets to the `public/` directory (HTML, CSS, etc.)
+
+10. Deploy the worker
 
        npx wrangler deploy
-10. Fetch the worker public URL
-11. Configure the DNS for the domain using the root address (`@`), type CNAME, setting the Name with the worker URL from previous step
+
+11. Fetch the worker public URL
+
+12. Configure the DNS for the domain using the root address (`@`), type CNAME, setting the Name with the worker URL from previous step
 
 ### Costs
 

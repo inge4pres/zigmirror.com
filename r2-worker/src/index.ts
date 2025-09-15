@@ -28,11 +28,21 @@ export default class extends WorkerEntrypoint<Env> {
 
     const filename = url.pathname.slice(1); // Remove leading slash
     
-    // Return 404 for empty path
+    // If filename is empty, serve the main page
     if (!filename) {
-      return new Response("Not Found", { status: 404 });
+      return this.env.ASSETS.fetch(new Request(new URL("/", request.url)));
     }
 
+    // If filename doesn't start with 'zig-', serve static assets
+    if (!filename.startsWith("zig-")) {
+      return this.env.ASSETS.fetch(request);
+    }
+
+    // Handle Zig downloads
+    return this.handleZigDownload(filename);
+  }
+
+  private async handleZigDownload(filename: string): Promise<Response> {
     // Validate filename against Zig tarball naming schema
     const match = filename.match(ZIG_FILENAME_REGEX);
     if (!match) {

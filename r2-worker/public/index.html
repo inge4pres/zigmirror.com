@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zigmirror.com - The Fastest Mirror to Download Zig Binaries</title>
+    <meta name="description" content="A fast, reliable mirror for downloading Zig programming language binaries, powered by Cloudflare CDN and R2 storage.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <span class="logo">zigmirror.com</span>
+                <span class="tagline">The fastest <a class="text-primary" href="https://ziglang.org/download/community-mirrors/">community</a> mirror to download Zig binaries</span>
+            </h1>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>Lightning-fast Zig downloads</h2>
+                <p class="hero-description">
+                    Get your Zig binaries at blazing speed from our globally distributed mirror, 
+                    powered by Cloudflare's edge network.
+                </p>
+            </section>
+
+            <section class="features">
+                <div class="feature-grid">
+                    <div class="feature" onclick="toggleFeature(this)">
+                        <div class="feature-header">
+                            <h3>🚀 Global CDN</h3>
+                        </div>
+                        <p class="feature-description">Files are served from Cloudflare's 300+ edge locations worldwide, ensuring the fastest possible download speeds from anywhere.</p>
+                        <div class="feature-content">
+                            <p>With Cloudflare's global network spanning every continent, your Zig downloads are automatically routed through the closest edge server. This means sub-100ms latency and maximum throughput regardless of your location.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature" onclick="toggleFeature(this)">
+                        <div class="feature-header">
+                            <h3>💾 R2 Storage</h3>
+                        </div>
+                        <p class="feature-description">Reliable object storage with instant caching. Files are automatically cached on first request and served instantly thereafter.</p>
+                        <div class="feature-content">
+                            <p>Cloudflare R2 provides enterprise-grade object storage with 99.999999999% durability. Once a file is cached, it's served directly from our edge network with zero cold-start delays.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature" onclick="toggleFeature(this)">
+                        <div class="feature-header">
+                            <h3>🔄 Auto-sync</h3>
+                        </div>
+                        <p class="feature-description">Always up-to-date with the official Zig releases. New versions are automatically mirrored from ziglang.org.</p>
+                        <div class="feature-content">
+                            <p>Our intelligent caching system monitors ziglang.org for new releases and pre-release builds. When you request a file that's not yet cached, it's fetched instantly and stored for future requests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="usage">
+                <h2>How to use</h2>
+                <div class="code-example">
+                    <p>Simply replace <code>ziglang.org/download</code> with <code>zigmirror.com</code> in your download URLs:</p>
+                    <pre><code># Instead of:
+wget https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz
+
+# Use:
+wget https://zigmirror.com/zig-linux-x86_64-0.14.0.tar.xz</code></pre>
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2>Why choose zigmirror.com?</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number">< 100ms</div>
+                        <div class="stat-label">Global latency</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label">Edge locations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>A community mirror for the <a href="https://ziglang.org" target="_blank" rel="noopener">Zig programming language</a></p>
+                <div class="social-links">
+                    <a href="https://github.com/inge4pres/zigmirror.com" target="_blank" rel="noopener" aria-label="View source on GitHub">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleFeature(element) {
+            // Add ripple effect
+            createRipple(element, event);
+            
+            // Close all other expanded features
+            const allFeatures = document.querySelectorAll('.feature');
+            allFeatures.forEach(feature => {
+                if (feature !== element) {
+                    feature.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle the clicked feature
+            element.classList.toggle('expanded');
+        }
+
+        function createRipple(element, event) {
+            const ripple = document.createElement('span');
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(247, 147, 30, 0.3);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                pointer-events: none;
+            `;
+            
+            element.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Close expanded features when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.feature')) {
+                const allFeatures = document.querySelectorAll('.feature');
+                allFeatures.forEach(feature => {
+                    feature.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Prevent clicks inside features from bubbling up
+        document.querySelectorAll('.feature').forEach(feature => {
+            feature.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
