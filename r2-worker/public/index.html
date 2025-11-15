@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zigmirror.com - The Fastest Mirror to Download Zig Binaries</title>
-    <meta name="description" content="A fast, reliable mirror for downloading Zig programming language binaries, powered by Cloudflare CDN and R2 storage.">
+    <title>zigmirror.com - Community Mirror for Zig Binaries</title>
+    <meta name="description" content="A community mirror for downloading Zig programming language binaries, powered by Cloudflare CDN and R2 storage.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,79 +16,30 @@
         <header>
             <h1>
                 <span class="logo">zigmirror.com</span>
-                <span class="tagline">The fastest <a class="text-primary" href="https://ziglang.org/download/community-mirrors/">community</a> mirror to download Zig binaries</span>
             </h1>
         </header>
 
         <main>
             <section class="hero">
-                <h2>Lightning-fast Zig downloads</h2>
-                <p class="hero-description">
-                    Get your Zig binaries at blazing speed from our globally distributed mirror, 
-                    powered by Cloudflare's edge network.
-                </p>
-            </section>
-
-            <section class="features">
-                <div class="feature-grid">
-                    <div class="feature" onclick="toggleFeature(this)">
-                        <div class="feature-header">
-                            <h3>🚀 Global CDN</h3>
-                        </div>
-                        <p class="feature-description">Files are served from Cloudflare's 300+ edge locations worldwide, ensuring the fastest possible download speeds from anywhere.</p>
-                        <div class="feature-content">
-                            <p>With Cloudflare's global network spanning every continent, your Zig downloads are automatically routed through the closest edge server. This means sub-100ms latency and maximum throughput regardless of your location.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature" onclick="toggleFeature(this)">
-                        <div class="feature-header">
-                            <h3>💾 R2 Storage</h3>
-                        </div>
-                        <p class="feature-description">Reliable object storage with instant caching. Files are automatically cached on first request and served instantly thereafter.</p>
-                        <div class="feature-content">
-                            <p>Cloudflare R2 provides enterprise-grade object storage with 99.999999999% durability. Once a file is cached, it's served directly from our edge network with zero cold-start delays.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature" onclick="toggleFeature(this)">
-                        <div class="feature-header">
-                            <h3>🔄 Auto-sync</h3>
-                        </div>
-                        <p class="feature-description">Always up-to-date with the official Zig releases. New versions are automatically mirrored from ziglang.org.</p>
-                        <div class="feature-content">
-                            <p>Our intelligent caching system monitors ziglang.org for new releases and pre-release builds. When you request a file that's not yet cached, it's fetched instantly and stored for future requests.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="usage">
-                <h2>How to use</h2>
-                <div class="code-example">
-                    <p>Simply replace <code>ziglang.org/download</code> with <code>zigmirror.com</code> in your download URLs:</p>
-                    <pre><code># Instead of:
-wget https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz
-
-# Use:
-wget https://zigmirror.com/zig-linux-x86_64-0.14.0.tar.xz</code></pre>
-                </div>
+                <h3 class="hero-description">
+                    Part of the Zig <a href="https://ziglang.org/download/community-mirrors/">community mirrors</a> network.
+                </h3>
             </section>
 
             <section class="stats">
-                <h2>Why choose zigmirror.com?</h2>
+                <h2>About this mirror</h2>
                 <div class="stats-grid">
                     <div class="stat">
-                        <div class="stat-number">< 100ms</div>
-                        <div class="stat-label">Global latency</div>
+                        <div class="stat-number">Cloudflare</div>
+                        <div class="stat-label">CDN Provider</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">300+</div>
                         <div class="stat-label">Edge locations</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime SLA</div>
+                        <div class="stat-number">R2</div>
+                        <div class="stat-label">Storage backend</div>
                     </div>
                 </div>
             </section>
